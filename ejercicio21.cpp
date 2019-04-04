@@ -18,10 +18,8 @@ int main()
 void MCMC(int N)
 {
     float old=drand48() - 0.5;
-    float new, r;
-    int i;
-    
-    for(i=0; i<N;i++)
+    float new, r;    
+    for(int i=0; i<N;i++)
     {
         r=1;
         new=old+drand48()-0.5;
@@ -33,12 +31,9 @@ void MCMC(int N)
         {
             old=new;
         }
-        cout << antiguo << endl;
-        
-    }
-    
+        cout << antiguo << endl;    
+    }    
 }
-
 float normal(float x)
 {
     float expo=x*x;
