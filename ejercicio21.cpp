@@ -18,20 +18,20 @@ int main()
 void MCMC(int N)
 {
     float old=drand48() - 0.5;
-    float new, r;    
+    float nuevo, r;    
     for(int i=0; i<N;i++)
     {
         r=1;
-        new=old+drand48()-0.5;
-        if(normal(new)/normal(old) < r)
+        nuevo=old+drand48()-0.5;
+        if(normal(nuevo)/normal(old) < r)
         {
-            r=(normal(new)/normal(old) < r);
+            r=(normal(nuevo)/normal(old) < r);
         }
         if(r > drand48())
         {
-            old=new;
+            old=nuevo;
         }
-        cout << antiguo << endl;    
+        cout << old << endl;    
     }    
 }
 float normal(float x)
